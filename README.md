@@ -4,6 +4,17 @@
 
 - push prisma db
   - npx prisma db push --preview-feature
+- Run Prisma studio (terminal)
+  - npx prisma studio
+
+# Storage
+
+- Database
+
+  -
+
+- Vercel Blob
+  - https://vercel.com/jareerzeenams-projects/next-app-practice-ynnj/stores
 
 #### Progress
 
