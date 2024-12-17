@@ -1,6 +1,7 @@
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -119,6 +120,19 @@ function EducationItem({ form, index, remove }: EducationItemProps) {
             <FormControl>
               <Input {...field} />
             </FormControl>
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name={`educations.${index}.field`}
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Area of Study</FormLabel>
+            <FormControl>
+              <Input {...field} />
+            </FormControl>
+            <FormDescription>Area of study or major</FormDescription>
           </FormItem>
         )}
       />
