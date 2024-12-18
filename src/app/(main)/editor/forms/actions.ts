@@ -1,7 +1,7 @@
 "use server"
 
 import openai from "@/lib/openai";
-import { GenerateSummaryInput, generateSummarySchema } from "@/lib/validation";
+import { Experience, GenerateExperienceInput, generateExperienceSchema, GenerateSummaryInput, generateSummarySchema } from "@/lib/validation";
 
 export async function generateSummary(input: GenerateSummaryInput) {
 
@@ -57,4 +57,57 @@ export async function generateSummary(input: GenerateSummaryInput) {
     }
 
     return aiResponse;
-} 
+}
+
+
+export async function generateExperience(input: GenerateExperienceInput) {
+
+    const { description } = generateExperienceSchema.parse(input);
+
+    const systemMessage = `
+        You are a job resume generator AI. Your task is to generate a single professional work experience entry based on the user's provided data. only include the experience and do not include any other information  in the response. Keep it short and concise and it is professional and engaging.
+        You can omit fields that cant be generated from provided data.
+
+        Job title:<job title> 
+        Company: <company name>
+        Location: <location> (only if provided)
+        Start date: <format YYYY-MM-DD> (only if provided)
+        End date: <format YYYY-MM-DD> (only if provided)
+        Description: <a few optimized description of the job in bullet points, might be inferred from the job title and company name>`;
+
+    const userMessage = `
+    Please provide a work entry from this description: ${description}`;
+
+    console.log("SYSTEM_MESSAGE", systemMessage);
+    console.log("USER_MESSAGE", userMessage);
+
+
+    const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [
+            { role: "system", content: systemMessage },
+            { role: "user", content: userMessage }
+        ],
+
+
+    });
+
+    const aiResponse = completion.choices[0].message.content;
+
+    if (!aiResponse) {
+        throw new Error("Failed to generate AI response");
+    }
+
+    console.log("AI_RESPONSE_WORK_EXP:::::", aiResponse);
+
+
+    return {
+        position: aiResponse.match(/Job title: (.*)/)?.[1] || "",
+        company: aiResponse.match(/Company: (.*)/)?.[1] || "",
+        location: aiResponse.match(/Location: (.*)/)?.[1],
+        description: (aiResponse.match(/Description:([\s\S]*)/)?.[1] || "").trim(),
+        startDate: aiResponse.match(/Start date: (\d{4}-\d{2}-\d{2})/)?.[1],
+        endDate: aiResponse.match(/End date: (\d{4}-\d{2}-\d{2})/)?.[1],
+    } satisfies Experience;
+
+}
