@@ -32,6 +32,7 @@ export default function ResumePreview({
         style={{ zoom: (1 / 794) * width }}
         className={cn("space-y-6 p-6", !width && "invisible")}
       >
+        <pre>{JSON.stringify(resumeData, null, 2)}</pre>
         <PersonalInfoHeader resumeData={resumeData} />
         <SummerySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />

@@ -11,7 +11,7 @@
 
 - Database
 
-  -
+  -vercel
 
 - Vercel Blob
   - https://vercel.com/jareerzeenams-projects/next-app-practice-ynnj/stores

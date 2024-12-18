@@ -11,6 +11,7 @@ import { summerySchema, SummeryValues } from "@/lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import GenerateSummaryButton from "./GenerateSummaryButton";
 
 export default function SummaryForm({
   resumeData,
@@ -54,6 +55,12 @@ export default function SummaryForm({
                     placeholder="Write a short introduction for your resume or let the AI do it for you based on entered data."
                   />
                 </FormControl>
+                <GenerateSummaryButton
+                  resumeData={resumeData}
+                  onSummaryGenerated={(summary) =>
+                    form.setValue("summary", summary)
+                  }
+                />
               </FormItem>
             )}
           />
