@@ -32,9 +32,9 @@ export default function ResumePreview({
         style={{ zoom: (1 / 794) * width }}
         className={cn("space-y-6 p-6", !width && "invisible")}
       >
-        <pre>{JSON.stringify(resumeData, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(resumeData, null, 2)}</pre> */}
         <PersonalInfoHeader resumeData={resumeData} />
-        <SummerySection resumeData={resumeData} />
+        <SummarySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />
         <EducationSection resumeData={resumeData} />
         <SkillsSection resumeData={resumeData} />
@@ -113,7 +113,7 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
   );
 }
 
-function SummerySection({ resumeData }: ResumeSectionProps) {
+function SummarySection({ resumeData }: ResumeSectionProps) {
   const { summary, colorHex } = resumeData;
 
   if (!summary) return null;
