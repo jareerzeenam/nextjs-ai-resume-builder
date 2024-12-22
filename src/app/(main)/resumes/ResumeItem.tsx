@@ -26,7 +26,6 @@ import Link from "next/link";
 import { useRef, useState, useTransition } from "react";
 import { deleteResume } from "./actions";
 import { useReactToPrint } from "react-to-print";
-import { on } from "events";
 
 interface ResumeItemProps {
   resume: ResumeServerData;
@@ -36,6 +35,7 @@ export default function ResumeItem({ resume }: ResumeItemProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const reactToPrintFn = useReactToPrint({
+    // @ts-expect-error: Suppress TypeScript error for contentRef
     contentRef,
     documentTitle: resume.title || "Untitled Resume",
   });

@@ -20,6 +20,7 @@ export default function ResumePreview({
 }: ResumePreviewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // @ts-expect-error: Suppress TypeScript error for containerRef
   const { width } = useDimensions(containerRef);
 
   return (
