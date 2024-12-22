@@ -35,7 +35,7 @@ export default function Home() {
         <Image
           src={resumeImage}
           alt="Resume Preview"
-          width={460}
+          width={420}
           className="shadow-md lg:rotate-[2.5deg]"
         />
       </div>
