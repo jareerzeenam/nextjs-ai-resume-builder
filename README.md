@@ -25,7 +25,7 @@ Welcome to the **AI Resume Builder**! This project is a SaaS platform designed t
 ## Tech Stack
 
 - **Frontend**: [Next.js 15](https://nextjs.org/)
-- **Design**: [ShadCN UI Components](https://shadcn.dev/), [Tailwind CSS](https://tailwindcss.com/)
+- **Design**: [ShadCN UI Components](https://ui.shadcn.com/), [Tailwind CSS](https://tailwindcss.com/)
 - **Database**: [Prisma ORM](https://www.prisma.io/) with [Postgres Neon Serverless DB](https://neon.tech/)
 - **Authentication**: [Clerk](https://clerk.dev/)
 - **File Storage**: Vercel Blob Store
@@ -87,7 +87,7 @@ Follow these steps to set up the project locally:
 
    ```bash
    git clone https://github.com/jareerzeenam/nextjs-ai-resume-builder.git
-   cd ai-resume-builder
+   cd nextjs-ai-resume-builder
    ```
 
 2. **Install Dependencies**:
