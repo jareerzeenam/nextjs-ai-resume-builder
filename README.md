@@ -42,31 +42,31 @@ Welcome to the **AI Resume Builder**! This project is a SaaS platform designed t
 
 ### Resume Builder and Preview
 
-![Resume Builder](src\assets\images\resume-builder.png)
+![Resume Builder](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/resume-builder.png)
 
 ### Resume Customization
 
-![Resume Customization](src\assets\images\customize-theme.png)
+![Resume Customization](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/customize-theme.png)
 
 ### AI Work Experience Generation
 
-![AI Work Experience Generation](src\assets\images\generate-experience.png)
+![AI Work Experience Generation](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/generate-experience.png)
 
 ### AI Summary Generation
 
-![AI Summary Generation](src\assets\images\generate-summary.png)
+![AI Summary Generation](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/generate-summary.png)
 
 ### Subscription Plans
 
-![Subscription Plans](src\assets\images\subscription-plans.png)
+![Subscription Plans](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/subscription-plans.png)
 
 ### Stripe Checkout
 
-![Stripe Checkout](src\assets\images\stripe.png)
+![Stripe Checkout](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/stripe.png)
 
 ### Upgrade Subscription
 
-## ![Upgrade Subscription](src\assets\images\upgrade.png)
+## ![Upgrade Subscription](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/upgrade.png)
 
 ## Setup Guide
 
