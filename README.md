@@ -86,7 +86,7 @@ Follow these steps to set up the project locally:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-repo/ai-resume-builder.git
+   git clone https://github.com/jareerzeenam/nextjs-ai-resume-builder.git
    cd ai-resume-builder
    ```
 
