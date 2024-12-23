@@ -38,7 +38,7 @@ Welcome to the **AI Resume Builder**! This project is a SaaS platform designed t
 
 ### Home Page
 
-![Home Page](src\assets\images\front-page.png)
+![Home Page](https://github.com/jareerzeenam/nextjs-ai-resume-builder/blob/master/src/assets/images/front-page.png)
 
 ### Resume Builder and Preview
 
